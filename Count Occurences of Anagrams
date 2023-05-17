@@ -1,0 +1,25 @@
+class Solution:
+
+	
+	def search(self,pat, txt):
+	    alpha="qwertyuiopasdfghjklzxcvbnm"
+        mp = {}
+        nmap={}
+        for i in alpha:
+            mp[i]=0
+            nmap[i]=0
+        for i in pat:
+            mp[i]+=1
+        ans = 0
+        j=len(pat)
+        for i in range(len(pat)):
+            nmap[txt[i]]+=1
+        for i in range(len(txt)-len(pat)):
+            if nmap==mp:
+                ans+=1
+            nmap[txt[i]]-=1
+            nmap[txt[j]]+=1
+            j+=1
+        if nmap==mp:
+            ans+=1
+        return ans
