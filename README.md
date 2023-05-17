@@ -9,3 +9,6 @@ it include a c++ program of question---
 3. Next greater element to left
 4. next smaller element to right
 5. next smaller element to left
+6. count occurences of Anagrams
+7. max sum subarray of size k
+8. first negative integer in every window of size k
